@@ -4,9 +4,6 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import ar.edu.unlam.pb2.MontaCargas.Cargas;
-import ar.edu.unlam.pb2.MontaCargas.Montacargas;
-
 public class MontacargasTest {
 
 	@Test
@@ -15,7 +12,6 @@ public class MontacargasTest {
 		Montacargas CAT =new Montacargas(pesoMaximo);
 		
 		assertNotNull(CAT);
-		
 		
 	}
 	
@@ -30,8 +26,7 @@ public class MontacargasTest {
 		Cargas carga1=new Cargas(id,peso,propietario);
 	
 		assertTrue(CAT.agregarCarga(carga1));
-		
-		
+			
 	}
 	
 	@Test
@@ -48,6 +43,25 @@ public class MontacargasTest {
 		
 		Integer cantidadDeCargas=1;
 		assertEquals(cantidadDeCargas,CAT.cantidadDeCargas());
+			
+	}
+	
+	@Test
+	public void TestQuePermitaObtenerElPesoCargado() {
+		Double pesoMaximo=100.0;	
+		Montacargas CAT =new Montacargas(pesoMaximo);
+		
+		Integer id=1;
+		Double peso=10.0;
+		String propietario="facundo";
+		Cargas carga1=new Cargas(id,peso,propietario);
+		
+		CAT.agregarCarga(carga1);
+		Double pesoObtenido=CAT.obtenerPesoCargado();
+		
+		Integer cantidadDeCargas=1;
+		assertEquals(cantidadDeCargas,CAT.cantidadDeCargas());
+		assertEquals(peso,pesoObtenido);
 			
 	}
 		

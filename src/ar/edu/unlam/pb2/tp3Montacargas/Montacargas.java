@@ -30,7 +30,7 @@ public class Montacargas {
 		return false;
 	}
 	
-	private Double obtenerPesoCargado() {
+	public Double obtenerPesoCargado() {
 		Double pesoTotalCargado=0.0;
 		for(Cargas carga: listaDeCargas) {
 			pesoTotalCargado+=carga.getPeso();
