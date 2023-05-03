@@ -20,6 +20,23 @@ public class Montacargas {
 	public void setPesoMaximo(Double pesoMaximo) {
 		this.pesoMaximo = pesoMaximo;
 	}
+	
+	public Boolean agregarCarga(Cargas nuevaCarga) {
+		 if(!(listaDeCargas.contains(nuevaCarga)))
+		   if(obtenerPesoCargado()+nuevaCarga.getPeso()<=this.pesoMaximo) {
+			  return this.listaDeCargas.add(nuevaCarga);
+		    }
+	   
+		return false;
+	}
+	
+	private Double obtenerPesoCargado() {
+		Double pesoTotalCargado=0.0;
+		for(Cargas carga: listaDeCargas) {
+			pesoTotalCargado+=carga.getPeso();
+		}
+		return pesoTotalCargado;
+	}
 
 
 
