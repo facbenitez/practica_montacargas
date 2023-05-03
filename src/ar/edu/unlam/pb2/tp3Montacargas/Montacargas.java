@@ -38,6 +38,9 @@ public class Montacargas {
 		return pesoTotalCargado;
 	}
 
+	public Integer cantidadDeCargas() {
+		return listaDeCargas.size();
+	}
 
 
 
