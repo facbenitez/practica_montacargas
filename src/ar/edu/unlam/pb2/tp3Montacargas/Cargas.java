@@ -5,7 +5,7 @@ public class Cargas {
 	private Double peso;
 	private String propietario;
 	private String descripcion;
-	
+
 	public Cargas(Integer id, Double peso, String propietario) {
 		this.id = id;
 		this.peso = peso;
