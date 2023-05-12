@@ -4,11 +4,20 @@ public class Cargas {
 	private Integer id;
 	private Double peso;
 	private String propietario;
+	private String descripcion;
 	
 	public Cargas(Integer id, Double peso, String propietario) {
 		this.id = id;
 		this.peso = peso;
 		this.propietario = propietario;
+	
+	}
+	
+	public Cargas() {
+		this.id = 0;
+		this.peso = 0.0;
+		this.propietario ="";
+		this.descripcion="";
 	}
 
 	public Integer getId() {
@@ -33,6 +42,16 @@ public class Cargas {
 
 	public void setPropietario(String propietario) {
 		this.propietario = propietario;
+	}
+
+
+	public String getDescripcion() {
+		return descripcion;
+	}
+
+
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
 	}
 	
 	
