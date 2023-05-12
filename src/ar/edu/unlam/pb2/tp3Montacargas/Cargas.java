@@ -4,7 +4,7 @@ public class Cargas {
 	private Integer id;
 	private Double peso;
 	private String propietario;
-	
+	//comentario prueba constructor
 	public Cargas(Integer id, Double peso, String propietario) {
 		this.id = id;
 		this.peso = peso;
