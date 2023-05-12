@@ -7,11 +7,12 @@ import org.junit.Test;
 public class MontacargasTest {
 
 	@Test
-	public void TestQuePermitaCrearAUnMontacargas() {
-		Double pesoMaximo=100.0;	
-		Montacargas CAT =new Montacargas(pesoMaximo);
+	public void QuePermitaCrearAUnMontacargasYLuegoVerificoSuPesoMaximo() {
+		
+		Montacargas CAT =new Montacargas(100.0);
 		
 		assertNotNull(CAT);
+		assertEquals((Double)100.0,CAT.getPesoMaximo());
 		
 	}
 	
