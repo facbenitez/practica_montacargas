@@ -80,6 +80,20 @@ public class MontacargasTest {
 		assertFalse(CAT.agregarCarga(carga2));
 		
 	}
+	
+	@Test
+	public void TestQuePermitaCrearUnaCargaPasandoValoresConGetterySetter() {	
+		Cargas carga1=new Cargas();
+		carga1.setId(1);
+		carga1.setPeso(10.0);
+		carga1.setPropietario("facundo");
+		carga1.setDescripcion("10kg de yeso");
+		
+		assertNotNull(carga1);
+		assertEquals((Integer)1,carga1.getId());
+		assertEquals("facundo",carga1.getPropietario());
+			
+	}
 
 
 }
