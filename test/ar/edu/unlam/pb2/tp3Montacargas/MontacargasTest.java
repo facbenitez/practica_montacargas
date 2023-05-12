@@ -85,7 +85,7 @@ public class MontacargasTest {
 	@Test
 	public void TestQuePermitaCrearUnaCargaPasandoValoresConGetterySetter() {	
 		Cargas carga1=new Cargas();
-		carga1.setId(1);
+		carga1.setId((Integer)1);
 		carga1.setPeso(10.0);
 		carga1.setPropietario("facundo");
 		carga1.setDescripcion("10kg de yeso");
