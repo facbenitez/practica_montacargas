@@ -1,12 +1,12 @@
 package ar.edu.unlam.pb2.tp3Montacargas;
 
 public class Cargas {
-	private Integer id;
+	private Double id;
 	private Double peso;
 	private String propietario;
 	private String descripcion;
 
-	public Cargas(Integer id, Double peso, String propietario) {
+	public Cargas(double id, Double peso, String propietario) {
 		this.id = id;
 		this.peso = peso;
 		this.propietario = propietario;
@@ -14,17 +14,17 @@ public class Cargas {
 	}
 	
 	public Cargas() {
-		this.id = 0;
+		this.id = 0.0;
 		this.peso = 0.0;
 		this.propietario ="";
 		this.descripcion="";
 	}
 
-	public Integer getId() {
+	public Double getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(Double id) {
 		this.id = id;
 	}
 
